@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog App</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+  <h1>Blog App</h1>
+  <a href="/blogs/create">Create Blog</a>
+
+  <ul>
+    <!-- Repeat the following code block for each blog -->
+    <li>
+      <h2>{{ blog.heading }}</h2>
+      <p><strong>Author:</strong> {{ blog.author }}</p>
+      <p>{{ blog.content }}</p>
+      <p><strong>Date:</strong> {{ blog.date }}</p>
+      <a href="/blogs/edit/{{ blog.id }}">Edit</a>
+      <a href="/blogs/delete/{{ blog.id }}">Delete</a>
+    </li>
+    <!-- End of code block -->
+  </ul>
+</body>
+</html>
+

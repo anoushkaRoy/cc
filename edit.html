@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Blog</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+  <h1>Edit Blog</h1>
+  <form method="POST" action="/blogs/update/{{ blog.id }}">
+    <div>
+      <label for="author">Author</label>
+      <input type="text" id="author" name="author" value="{{ blog.author }}" required>
+    </div>
+    <div>
+      <label for="heading">Heading</label>
+      <input type="text" id="heading" name="heading" value="{{ blog.heading }}" required>
+    </div>
+    <div>
+      <label for="content">Content</label>
+      <textarea id="content" name="content" required>{{ blog.content }}</textarea>
+    </div>
+    <button type="submit">Update</button>
+  </form>
+</body>
+</html>
